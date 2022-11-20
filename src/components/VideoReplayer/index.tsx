@@ -5,6 +5,7 @@ import { Empty, Spin, Input } from 'antd'
 import { getReplayerChatHistory } from '@/api'
 import Icon from '@/components/Icon'
 import HighlightText from '@/components/HighlightText'
+import type { VideoJsPlayerOptions } from 'video.js'
 
 import './index.scss'
 
@@ -22,7 +23,6 @@ interface IProps {
   chat?: { totalNum: number; roomActionList: any[] }
 }
 
-const PlayBackRages = [0.7, 1.0, 1.5, 2.0]
 const chatHistoryMap: Record<string, any> = {}
 
 const VideoReplayerModal = (props: IProps) => {
@@ -51,14 +51,22 @@ const VideoReplayerModal = (props: IProps) => {
 
   const initializeVideo = useCallback(() => {
     if (!props.replay?.choseUrl) return
+    const options: VideoJsPlayerOptions = {
+      playbackRates: [0.7, 1.0, 1.5, 2.0],
+      responsive: true,
+      plugins: {
+        hotkeys: {
+          volumeStep: 0.1,
+          seekStep: 15,
+          enableModifiersForNumbers: false
+        }
+      }
+    }
     if (playerRef.current) {
       playerRef.current.src(props.replay?.choseUrl)
-      playerRef.current.playbackRates(PlayBackRages)
+      playerRef.current.options(options)
     } else {
       if (videoRef.current) {
-        const options = {
-          playbackRates: PlayBackRages
-        }
         const player = (window as any).videojs(videoRef.current, options, function ready() {})
         playerRef.current = player
       }

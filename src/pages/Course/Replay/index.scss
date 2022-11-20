@@ -38,3 +38,29 @@
     height: auto;
   }
 }
+
+.video-hotkeys-help {
+  ul {
+    margin: 0;
+    padding: 0 10px;
+
+    li  {
+      margin: 6px 0;
+
+      span {
+        border-radius: 2px;
+        background-color: #e3e3e3;
+        padding: 2px 4px;
+        margin: 0 2px;
+        font-size: 12px;
+
+        &:first-child {
+          display: inline-block;
+          min-width: 80px;
+          text-align: center;
+        }
+
+      }
+    }
+  }
+}
