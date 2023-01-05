@@ -42,8 +42,7 @@ const MyCourseList = () => {
     const url = `${siteConfig.roomURL}?username=${registerInfo.name}&userId=${
       currentUser.phone
     }&role=${RoleNameMap[status] || 'student'}&roomId=${course.roomId}&video=${
-      course.ishd || '480p'
-    }`
+      course.ishd || '480p'}`
     window.open(url)
   }
 
