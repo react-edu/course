@@ -1,32 +1,20 @@
 export default {
   clientId: 385,
-  roomURL: 'https://room.os2edu.cn',
+  roomURL: 'https://room.reactedu.cn',
   logo: 'https://ssl.cdn.maodouketang.com/Fpkgonzaw5GTUFa0Bfvd_ZlO5yq1',
-  title: '开源操作系统社区',
-  subTitle: '促进操作系统的教学、研究与产业的发展',
+  title: 'React培训社区',
+  subTitle: '致力于做中国最好的React培训品牌',
   footer: {
     resources: [
       {
-        text: 'Rust基础教程',
-        link: 'http://docs.os2edu.cn/'
+        text: 'React官网',
+        link: 'https://reactjs.org/'
       },
-      {
-        text: '清华rCore操作系统实践教程',
-        link: 'http://rcore-os.cn/rCore-Tutorial-Book-v3/'
-      },
-      {
-        text: '全国大学生操作系统设计大赛',
-        link: 'https://os.educg.net/2022CSCC'
-      }
     ],
     contact: [
       {
         label: '电话',
         text: '13691584139'
-      },
-      {
-        label: '邮箱',
-        text: 'hello@maodou.io'
       },
       {
         label: '地址',
