@@ -1,7 +1,7 @@
 export default {
-  clientId: 385,
+  clientId: 478,
   roomURL: 'https://room.reactedu.cn',
-  logo: 'https://ssl.cdn.maodouketang.com/Fpkgonzaw5GTUFa0Bfvd_ZlO5yq1',
+  logo: 'https://ssl.cdn.maodouketang.com/FoRrEnaH85pNGFtxu38hwf1dHbBt',
   title: 'React培训社区',
   subTitle: '致力于做中国最好的React培训品牌',
   footer: {
